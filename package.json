@@ -1,0 +1,24 @@
+{
+  "name": "brb-laptops",
+  "version": "1.0.0",
+  "description": "buy and sell laptops",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarkitekkt/brb-laptops.git"
+  },
+  "author": "bryce, blaise, ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarkitekkt/brb-laptops/issues"
+  },
+  "homepage": "https://github.com/aarkitekkt/brb-laptops#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
