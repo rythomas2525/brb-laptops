@@ -14,8 +14,8 @@ module.exports = function (app) {
 
   app.post("/api/laptops", function (req, res) {
     db.laptops.create({
-      text: req.body.text,
-      complete: req.body.complete
+      brand: req.body.brand,
+      model: req.body.model
     }).then(function (dblaptops) {
       res.json(dblaptops);
     })
