@@ -9,7 +9,7 @@ module.exports = {
     test: {
         username: "root",
         password: process.env.MYSQL_PASSWORD,
-        database: "brb_laptops",
+        database: "database_test",
         host: "127.0.0.1",
         dialect: "mysql"
     },
@@ -21,4 +21,6 @@ module.exports = {
         dialect: "mysql"
     }
 }
+
+
 
