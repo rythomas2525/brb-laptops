@@ -1,4 +1,4 @@
-var express = require("express");
+// var express = require("express");
 
 
 
@@ -8,12 +8,17 @@ var lap = [{ "id": 1, "brand": "Apple", "model": "MacBook Pro", "operating_syste
 module.exports = function (app) {
     app.get("/", function (req, res) {
         console.log("works")
-        db.laptops.findAll({}).then(function (laptopData) {
-            var hbsObject = {
-                lap: laptopData
-            };
-            console.log(hbsObject);
-            res.render("index", hbsObject);
+        db.laptops.findAll({ raw: true }).then(function (laptopData) {
+            // var hbsObject = {
+            //     laptop_data: laptopData
+            // };
+            // console.log(hbsObject);  
+            console.log(laptopData);
+
+            res.render("index", { laptop_data: laptopData });
+            // res.json(laptopData)
+
+            // res.render("index", hbsObject);
             // res.json(data)
         });
     });
