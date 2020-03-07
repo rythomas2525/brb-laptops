@@ -14,6 +14,10 @@ module.exports = function (app) {
 
   app.post("/api/laptops", function (req, res) {
     db.laptops.create({
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone,
+      city: req.body.city,
       brand: req.body.brand,
       model: req.body.model,
       operating_system: req.body.operating_system,
