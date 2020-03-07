@@ -1,15 +1,92 @@
-<h1>BRB Laptops</h1>
-<p>Hello</p>
-<ul>
+<nav class="nav-extended N/A transparent">
+  <div class="nav-background">
+    <div class="pattern active"
+      style="background-image: url('https://images.pexels.com/photos/128639/pexels-photo-128639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+    </div>
+  </div>
+  <div class="nav-wrapper container">
+    <a href="/" class="brand-logo"><i class="material-icons">desktop_windows</i>BRB</a>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/">BUY</a></li>
+      <li><a href="sell.html">SELL</a></li>
+      {{!-- <li><a href="signup.html">Sign Up</a></li> --}}
 
-  {{#laptop_data}}
-  <li>
-    <p>
-      <p>{{this.brand}}</p>
-    </p>
-  </li>
-  {{/laptop_data}}
+    </ul>
+    <!-- Dropdown Structure -->
+
+
+    <div class="nav-header center">
+      <h1>CURRENT LISTINGS</h1>
+      <div class="tagline">We'd love to help you, but we'll BRB.</div>
+    </div>
+  </div>
+
+  <!-- Fixed Masonry Filters -->
+  <div class="categories-wrapper">
+    <div class="categories-container">
+      <ul class="categories container">
+        <li class="active"><a href="#all">All</a></li>
+        <li><a href="#mac">Macintosh</a></li>
+        <li><a href="#windows">Windows</a></li>
+        <!-- <li><a href="#sacred">Sacred Geometry</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<ul class="sidenav" id="nav-mobile">
+  <li class="active"><a href="index.html"><i class="material-icons">import_export</i>Buy</a></li>
+  <li><a href="sell.html"><i class="material-icons">attach_money</i>Sell</a></li>
+  {{!-- <li><a href="signup.html"><i class="material-icons">assignment_ind</i>Sign Up</a></li> --}}
 </ul>
 
+<div id="portfolio" class="section gray">
+  <div class="container">
+    <div class="gallery row">
+      {{#laptop_data}}
+      <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter mac">
+        <div class="gallery-curve-wrapper">
+          <a class="gallery-cover gray">
+            <img class="responsive-img"
+              src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fbrookecrothers%2Ffiles%2F2016%2F10%2F2016-macbook-pro-small.jpg"
+              alt="placeholder">
+          </a>
+          <div class="gallery-header grey">
+            <span>{{this.brand}}</span>
+          </div>
+          <div class="gallery-body">
+            <div class="title-wrapper">
+              <h3>{{this.brand}}</h3>
+              <span class="price">${{this.price}}</span>
+            </div>
+            <ul>
+              <li>{{this.release_year}}</li>
+              <li>{{this.processor}}</li>
+              <li>{{this.ram}}GB RAM</li>
+              <li>{{this.hd_storage}} Storage</li>
+            </ul>
+            <p class="description">{{this.summary}}</p>
 
-{{!--  {{this.id}} --}}
+
+            <div class="carousel-wrapper">
+              <div class="carousel">
+                <a class="carousel-item" href="#one!"><img
+                    src="https://cnet3.cbsistatic.com/img/Uua9z5yXya01a9T0ERRwjdie3qg=/2019/11/12/84e1159c-b8cb-4349-9e3b-3c37cc78945f/36-macbook-pro-16-inch.jpg"></a>
+                <a class="carousel-item" href="#two!"><img
+                    src="https://images.idgesg.net/images/article/2018/11/mrv18_034_macbookair2018-100780545-large.jpg"></a>
+                <a class="carousel-item" href="#three!"><img
+                    src="https://photos5.appleinsider.com/gallery/30344-49698-29531-47682-MacBook-Pro-keyboard-l-l.jpg"></a>
+                <a class="carousel-item" href="#four!"><img
+                    src="https://i.pcmag.com/imagery/reviews/0227QDT3xYwn3xEOpyiJpNU-1.fit_lpad.size_624x364.v_1574212824.jpg"></a>
+                <a class="carousel-item" href="#five!"><img
+                    src="https://venturebeat.com/wp-content/uploads/2016/12/MacBook-Pro-2016-ODonnell-04-e1551720273342.jpg?fit=1838%2C1034&strip=all"></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {{/laptop_data}}
+    </div>
+  </div>
+</div>
