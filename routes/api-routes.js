@@ -39,26 +39,14 @@ module.exports = function (app) {
       });
   });
 
-  // app.get("/api/users", function (req, res) {
-  //   db.users.findAll({}).then(function (dbusers) {
-  //     res.json(dbusers);
-  //   });
-  // });
-
-  // app.post("/api/users", function (req, res) {
-  //   db.users.create({
-  //     name: req.body.name,
-  //     email: req.body.email,
-  //     phone_number: req.body.phone_number,
-  //     city: req.body.city
-  //   }).then(function (dbusers) {
-  //     res.json(dbusers);
-  //   })
-  //     .catch(function (err) {
-
-  //       res.json(err);
-  //     });
-  // });
-
-
+  app.delete("/api/laptops/:id", function (req, res) {
+    db.laptops.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function (dblaptops) {
+        res.json(dblaptops);
+      });
+  });
 };
