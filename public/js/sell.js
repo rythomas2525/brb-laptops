@@ -22,6 +22,18 @@ $(function () {
             price: $("#price").val().trim()
         }
 
+        // Send the POST request.
+        $.ajax("/api/laptops", {
+            type: "POST",
+            data: newLaptop
+        }).then(
+            function () {
+                console.log("New Laptop has been added to the inventory");
+                // Reload the page to get the updated list
+                location.assign("/");
+            }
+        );
+
         console.log(newLaptop);
 
     });
