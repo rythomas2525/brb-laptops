@@ -1,7 +1,7 @@
 <nav class="nav-extended N/A transparent">
   <div class="nav-background">
     <div class="pattern active"
-      style="background-image: url('https://images.pexels.com/photos/128639/pexels-photo-128639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+      style="background-image: url('https://images.pexels.com/photos/2657669/pexels-photo-2657669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1060');">
     </div>
   </div>
   <div class="nav-wrapper container">
@@ -44,7 +44,7 @@
   <div class="container">
     <div class="gallery row">
       {{#laptop_data}}
-      <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter mac">
+      <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter {{this.operating_system}}">
         <div class="gallery-curve-wrapper">
           <a class="gallery-cover gray">
             <img class="responsive-img"
@@ -82,11 +82,25 @@
                     src="https://venturebeat.com/wp-content/uploads/2016/12/MacBook-Pro-2016-ODonnell-04-e1551720273342.jpg?fit=1838%2C1034&strip=all"></a>
               </div>
             </div>
+            <ul>
+              <li>{{this.name}}</li>
+              <li>Near {{this.city}}</li>
+              <hr>
+              <ul>Contact:
+                <li>Phone: {{this.phone}}</li>
+                <li>Email: {{this.email}}</li>
+              </ul>
+            </ul>
+            <br>
+            <br>
+            <button id="soldButton" class="btn waves-effect red" type="delete" name="action">Mark as Sold
+              <i class="material-icons right">delete_forever</i>
+            </button>
           </div>
-
         </div>
       </div>
       {{/laptop_data}}
     </div>
   </div>
 </div>
+{{!-- ADD A SALE BUTTON TO THE CARDS! --}}
