@@ -37,4 +37,20 @@ $(function () {
         console.log(newLaptop);
 
     });
+
+    $("#soldButton").on("click", function (event) {
+
+        var soldId = $(this).data("id");
+
+        console.log(soldId);
+
+        $.ajax("/api/burgers/" + soldId, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("Laptop has been sold!");
+                location.reload();
+            }
+        );
+    });
 })
