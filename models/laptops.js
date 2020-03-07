@@ -1,5 +1,46 @@
 module.exports = function (sequelize, DataTypes) {
     var laptops = sequelize.define("laptops", {
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Please enter your name'
+                },
+                len: [1, 40]
+            }
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Please enter your email'
+                },
+                isEmail: true,
+                len: [1, 50]
+            }
+        },
+        phone: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Please enter a valid phone number'
+                },
+                len: [1, 40]
+            }
+        },
+        city: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Please enter the city you reside in'
+                },
+                len: [1, 40]
+            }
+        },
         brand: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -117,5 +158,6 @@ module.exports = function (sequelize, DataTypes) {
         }
 
     });
+
     return laptops;
 };
