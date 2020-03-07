@@ -11,11 +11,15 @@ $(function () {
             brand: $("#brand").val().trim(),
             model: $("#model").val().trim(),
             operating_system: $("#os").val().trim(),
-            laptop_condition: $("#condition").val().trim(),
-            processor: $("processor").val().trim(),
+            laptop_condition: $("#condition").val(),
+            processor: $("#processor").val().trim(),
             graphics: $("#graphics").val().trim(),
-
-
+            ram: $("#ram").val().trim(),
+            screen_dimension: $("#screen").val().trim(),
+            hd_storage: $("#storage").val().trim(),
+            release_year: $("#year").val().trim(),
+            summary: $("#summary").val().trim(),
+            price: $("#price").val().trim()
         }
 
         console.log(newLaptop);
