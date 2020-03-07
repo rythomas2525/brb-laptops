@@ -23,4 +23,9 @@ module.exports = function (app) {
         });
     });
 
+    app.get("/sell", function (req, res) {
+        console.log("sell page works")
+        res.render("sell");
+    });
+
 }
