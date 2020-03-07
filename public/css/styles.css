@@ -9,3 +9,6 @@
 .signupheader {
     text-shadow: 2px 3px black;
 }
+input {
+    color: white!important;
+}
