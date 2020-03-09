@@ -1,4 +1,5 @@
-$(function () {
+$(document).ready(function () {
+
     $("#newLaptop").on("submit", function (event) {
 
         event.preventDefault();
@@ -38,13 +39,14 @@ $(function () {
 
     });
 
-    $("#soldButton").on("click", function (event) {
+    $(".soldButton").click(function () {
+
 
         var soldId = $(this).data("id");
 
-        console.log(soldId);
+        console.log("Laptop ID is " + soldId);
 
-        $.ajax("/api/burgers/" + soldId, {
+        $.ajax("/api/laptops/" + soldId, {
             type: "DELETE"
         }).then(
             function () {
@@ -53,4 +55,5 @@ $(function () {
             }
         );
     });
-})
+
+});
