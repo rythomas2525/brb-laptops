@@ -91,7 +91,8 @@
             },
 
             function complete() {
-
+                var URL = task.snapshot.ref.getDownloadURL().then(function (downloadURL) { console.log(downloadURL) })
+                return URL;
 
             })
 
@@ -123,6 +124,8 @@
 
             function complete() {
 
+                var secondaryURL = task.snapshot.ref.getDownloadURL().then(function (downloadURL) { console.log(downloadURL) })
+                return secondaryURL;
 
             })
 
