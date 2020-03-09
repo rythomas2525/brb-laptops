@@ -125,13 +125,17 @@
                 </div>
             </div>
             <div class="file-field input-field">
+
+
                 <div class="btn">
                     <span>Main Picture</span>
                     <input type="file" value="upload" id="mainPictureButton">
                 </div>
+
                 <div class="file-path-wrapper">
                     <input id="mainphoto" class="file-path validate" type="text" placeholder="<--- Click here">
                 </div>
+                <progress value="0" max="100" id="uploader">0%</progress>
             </div>
             <div class="file-field input-field">
                 <div class="btn">
@@ -141,6 +145,7 @@
                 <div class="file-path-wrapper">
                     <input id="additionalPhotos" class="file-path validate" type="text" placeholder="<--- Click here">
                 </div>
+                <progress value="0" max="100" id="secondaryUploader">0%</progress>
             </div>
             <button class="btn waves-effect" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
