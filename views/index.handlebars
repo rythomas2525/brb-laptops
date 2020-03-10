@@ -43,7 +43,7 @@
 <div id="portfolio" class="section gray">
   <div class="container">
     <div class="gallery row">
-      {{#laptop_data}}
+      {{#each laptop_data}}
       <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter {{this.operating_system}}">
         <div class="gallery-curve-wrapper">
           <a class="gallery-cover gray">
@@ -67,6 +67,8 @@
               <li>{{this.brand}} Operating system</li>
             </ul>
             <p class="description">{{this.summary}}</p>
+
+
 
 
             <div class="carousel-wrapper">
@@ -94,13 +96,14 @@
             </ul>
             <br>
             <br>
-            <button id="soldButton" class="btn waves-effect red" type="delete" name="action">Mark as Sold
+            <button class="soldButton btn waves-effect red" data-id="{{this.id}}">Mark
+              as Sold
               <i class="material-icons right">delete_forever</i>
             </button>
           </div>
         </div>
       </div>
-      {{/laptop_data}}
+      {{/each}}
     </div>
   </div>
 </div>
