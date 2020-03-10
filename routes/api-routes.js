@@ -29,7 +29,9 @@ module.exports = function (app) {
       hd_storage: req.body.hd_storage,
       release_year: req.body.release_year,
       summary: req.body.summary,
-      price: req.body.price
+      price: req.body.price,
+      main_photo: req.body.main_photo,
+      additional_photos: req.body.additional_photos
     }).then(function (dblaptops) {
       res.json(dblaptops);
     })

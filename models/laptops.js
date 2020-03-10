@@ -95,10 +95,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         graphics: {
             type: DataTypes.STRING,
-            allowNull: true,
-            validate: {
-                len: [1, 40]
-            }
+            allowNull: true
         },
         ram: {
             type: DataTypes.STRING,
@@ -133,18 +130,11 @@ module.exports = function (sequelize, DataTypes) {
         },
         release_year: {
             type: DataTypes.INTEGER,
-            allowNull: true,
-            validate: {
-                isInt: true,
-                len: 4
-            }
+            allowNull: true
         },
         summary: {
             type: DataTypes.TEXT('tiny'),
-            allowNull: true,
-            validate: {
-                len: [1, 200]
-            }
+            allowNull: true
         },
         price: {
             type: DataTypes.INTEGER,
@@ -155,6 +145,14 @@ module.exports = function (sequelize, DataTypes) {
                 },
                 isInt: true
             }
+        },
+        main_photo: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        additional_photos: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
 
     });

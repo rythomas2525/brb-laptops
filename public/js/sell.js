@@ -20,7 +20,9 @@ $(document).ready(function () {
             hd_storage: $("#storage").val().trim(),
             release_year: $("#year").val().trim(),
             summary: $("#summary").val().trim(),
-            price: $("#price").val().trim()
+            price: $("#price").val().trim(),
+            main_photo: $("#mainphoto").val().trim(),
+            additional_photos: $("#additionalPhotos").val().trim()
         }
 
         // Send the POST request.
