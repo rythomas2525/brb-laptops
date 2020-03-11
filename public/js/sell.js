@@ -59,10 +59,6 @@ $(document).ready(function () {
 
 
 
-    var secondaryPictureButton = document.getElementById("secondaryPictureButton");
-
-    var secondaryUploader = document.getElementById("secondaryUploader")
-
 
 
     var URL = ""

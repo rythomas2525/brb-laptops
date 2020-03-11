@@ -61,37 +61,43 @@
 
 
 
-// secondaryPictureButton.addEventListener('change', function (e) {
-//     //Get files
-//     for (var i = 0; i < e.target.files.length; i++) {
-//         var imageFile = e.target.files[i];
+if (window.location.pathname === '/sell') {
+    var secondaryPictureButton = document.getElementById("secondaryPictureButton");
 
-//         uploadImageAsPromise(imageFile);
-//     }
-// });
+    var secondaryUploader = document.getElementById("secondaryUploader")
+    secondaryPictureButton.addEventListener('change', function (e) {
+        //Get files
+        for (var i = 0; i < e.target.files.length; i++) {
+            var imageFile = e.target.files[i];
 
-// //Handle waiting to upload each file using promise
-// function uploadImageAsPromise(imageFile) {
+            uploadImageAsPromise(imageFile);
+        }
+    });
 
-//     var storageRef = firebase.storage().ref("secondaryimages/" + imageFile.name);
+    //Handle waiting to upload each file using promise
+    function uploadImageAsPromise(imageFile) {
 
-//     //Upload file
-//     var task = storageRef.put(imageFile);
+        var storageRef = firebase.storage().ref("secondaryimages/" + imageFile.name);
+        console.log(imageFile);
 
-//     //Update progress bar
-//     task.on('state_changed',
-//         function progress(snapshot) {
-//             var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
-//             secondaryUploader.value = percentage;
-//         },
-//         function error(err) {
-//             throw err;
-//         },
-//         function complete() {
-//             var secondaryURL = task.snapshot.ref.getDownloadURL().then(function (downloadURL) { console.log(downloadURL) })
-//             return secondaryURL;
+        //Upload file
+        var task = storageRef.put(imageFile);
 
-//         }
-//     );
+        //Update progress bar
+        task.on('state_changed',
+            function progress(snapshot) {
+                var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+                secondaryUploader.value = percentage;
+            },
+            function error(err) {
+                throw err;
+            },
+            function complete() {
+                var secondaryURL = task.snapshot.ref.getDownloadURL().then(function (downloadURL) { console.log(downloadURL) })
+                return secondaryURL;
 
-// }
+            }
+        );
+
+    }
+}
