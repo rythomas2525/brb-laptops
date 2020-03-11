@@ -92,8 +92,7 @@ $(document).ready(function () {
             release_year: $("#year").val().trim(),
             summary: $("#summary").val().trim(),
             price: $("#price").val().trim(),
-            main_photo: URL,
-            additional_photos: $("#additionalPhotos").val().trim()
+            main_photo: URL
         }
 
         // Send the POST request.
