@@ -33,10 +33,11 @@ module.exports = function (app) {
       main_photo: req.body.main_photo,
       additional_photos: req.body.additional_photos
     }).then(function (dblaptops) {
+      console.log("36")
       res.json(dblaptops);
     })
       .catch(function (err) {
-
+        console.log(err)
         res.json(err);
       });
   });
