@@ -75,7 +75,9 @@ $(document).ready(function () {
 
         event.preventDefault();
         if (URL === "") {
-            console.log(URL + " is empty")
+
+            URL = "/assets/images/laptop-placeholder.png";
+            console.log("No Image Uploaded")
         }
 
         console.log(URL)
@@ -107,6 +109,8 @@ $(document).ready(function () {
         }).then(
             function () {
                 console.log("New Laptop has been added to the inventory");
+
+                URL = "";
                 // Reload the page to get the updated list
                 location.assign("/");
             }
