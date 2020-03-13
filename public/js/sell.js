@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     var firebaseConfig = {
-        apiKey: process.env.apiKey,
+        apiKey: "AIzaSyByHflVSt-95YP4yWECkiK6vLGTguS7KFU",
         authDomain: "future-force-270416.firebaseapp.com",
         databaseURL: "https://future-force-270416.firebaseio.com",
         projectId: "future-force-270416",
