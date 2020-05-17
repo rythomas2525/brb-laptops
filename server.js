@@ -1,7 +1,7 @@
 
 
 var express = require("express");
-
+var compression = require('compression')
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -16,6 +16,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
+app.use(compression());
+
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
@@ -27,6 +29,7 @@ app.set("view engine", "handlebars");
 require("./routes/api-routes.js")(app);
 require("./routes/handlebars-routes")(app);
 // require("./routes/html-routes.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
