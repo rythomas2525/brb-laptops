@@ -1,5 +1,9 @@
 # BRB Laptops
 
+## SCREENSHOT
+![Image description](./public/assets/images/videogif.gif)
+
+
 <h2>Topics of Discussion</h2>
 
 <p>We have quite a bit of room to grow</p>
@@ -13,6 +17,11 @@
   <li>Being able to read</li>
 </ul>
 
+##Deployed
+https://aqueous-beach-33300.herokuapp.com/#!
+
+##Repo
+https://github.com/rythomas2525/brb-laptops
 
 <h2>Deployment</h2>
 <ul>
@@ -30,16 +39,9 @@
 </ul>
 <p></p>
 
-
 <h2>Author</h2>
 
 <ul>
   <li>Ryan, Bryce & Blaise</li>
 </ul>
-<h2>Acknowledgments</h2>
-<ul>
-  <li></li>
-  <li></li>
-</ul>
-<p>Thanks for teaching</p>
-<p>Enjoy</p>
+
