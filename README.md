@@ -17,10 +17,10 @@
   <li>Being able to read</li>
 </ul>
 
-##Deployed
+## Deployed
 https://aqueous-beach-33300.herokuapp.com/#!
 
-##Repo
+## Repo
 https://github.com/rythomas2525/brb-laptops
 
 <h2>Deployment</h2>
